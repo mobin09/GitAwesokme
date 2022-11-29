@@ -1,0 +1,17 @@
+1. git init --> To initialize the git
+                This command internally creates one folder called .git
+                .git is used by git software to identify the folder which should participate in pushing to
+                "LOCAL" and "REMOTE" repositories.
+
+2. git status --> This command is used to check the status of the working directory
+
+
+
+3. git add    --> From working directory to staging area.
+
+
+4. git restore <file-name> :--> From modified file to old file in staging area.
+                         e.g git restore Demo.java
+
+--------
+by Mobin Arshad
