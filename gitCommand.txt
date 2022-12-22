@@ -16,3 +16,28 @@ Types of Version Control System
  > Centralized Version Control System.
  > Distributed Version Control System.
  
+Local Version Control System
+----------------------------
+ > A local version Control System is a local database located on your local computer, in which every file change 
+   is stored as a patch
+
+Centralized Version Control System
+---------------------------------- 
+ > Centralized Version Control System contain just one repository globally and every user need to commit for reflecting
+   One's changes in the repository. It is possible for others to see you changes by updating e.g SVN
+
+Distributed Version Control System
+----------------------------------
+ > Distributed Version Control Systems contain multiple repositories. Each user has their own repository and working copy
+   just committing your changes will not give others access to your changes. This is because commit will reflect those changes in your local repository and you need to push them in order to make them visible on the central repository.
+   Similarly, when you update, you do not get other changes, unless you have first pulled those changes into your repository.   
+   
+ > To make your changes visible to others, four things are required
+          You commit
+          You push
+          They pull
+          They update
+
+ > The most popular version control systems are Git and Mercurial
+		  
+   
