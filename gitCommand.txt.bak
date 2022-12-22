@@ -28,13 +28,75 @@ Centralized Version Control System
 
 Distributed Version Control System
 ----------------------------------
- > Distributed Version Control Systems contain multiple repositories. Each user has their own repository and working copy
-   just committing your changes will not give others access to your changes. This is because commit will reflect those changes in your local repository and you need to push them in order to make them visible on the central repository.
-   Similarly, when you update, you do not get other changes, unless you have first pulled those changes into your repository.   
+ > Distributed Version Control Systems contain multiple repositories. Each user has their own repository
+   and working copy just committing your changes will not give others access to your changes.
+   This is because commit will reflect those changes in your local repository and you need to push 
+   them in order to make them visible on the central repository.
+   Similarly, when you update, you do not get other changes, unless you have
+   first pulled those changes into your repository.   
    
  > To make your changes visible to others, four things are required
           You commit
           You push
           They pull
-          They update		  
+          They update
+
+ > The most popular version control systems are Git and Mercurial
+		  
+There are two types of Git Software
+-----------------------------------
+           1. Git Server
+		   2. Git Client
+		   
+Git Server
+----------
+ > It is a repository.
+ > It is the largest host of the source code.
+ > It is used to mannage/store the source code of the project. 
+ > Some of the Git server tools are:- Githhub, BitBucket, GitLab etc.
+ 
+Git Client
+----------
+ > It is a tool which is used to connect to our Git server.
+   e.g     > Git bash -- Linux command are required
+           > Git gui  -- GUI through clicks
+		   > Git cmd  -- command line tools
+
+How git Works
+------------
+ > Compared to other VCS like subversions. Most operations in Git requires local files and local 
+   resources to operate. 
+ > If you are used to CVCS where most operations have that network latency overhead.
+
+Architecture of Git (Three stages in Git)
+--------------------
+                        add                    commit                       push
+	  |Working Area ----------> Staging Area ----------> Local Repository |-----------> Git Server
+	  
+	  To understant it better see pics of Architecture of Git.
+	  
+	  Once the code in staging area, we commit it to the local repository with some standard message,
+	  from local repository we push it to remote repository by providing url, username and password
+	  
+	  
+	  
+	  
+Workign Directory (Working Area)
+--------------------------------
+ > The working area is a single checkout of one version of the project.
+   These files are pulled out of the compressed database in the Git
+   directory and placed on disk for you to use or modify.
    
+Stagin Area
+-----------
+ > The staging area is a file, generally contained in your Git directory,
+   that stores information about what will go into your next commit. Its
+   technical name is the "Index", but the phrase "Staging area" works just as well.   
+
+Local Repository (Repository Area)(.git)
+----------------------------------
+ > The Git directory is where Git stores the metadata and object database for your project.
+   This is the most important part of Git, and it is what  is copied when you clone a repository
+   from another computer.
+   
+ 
