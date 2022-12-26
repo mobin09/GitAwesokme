@@ -154,10 +154,29 @@ git help / git --help  and status command
  
  > git status (check the status
  
-git add and git commit
-----------------------
- > git add <file> -- To update what will be commited --workign area to staging area -- untracked to tracked file
-   git add .      -- Move all files from working area to staging area -- untracked to tracked file
+git add , git commit, git log, git log --oneline
+------------------------------------------------
+ > git add <file> ---- To update what will be commited --workign area to staging area -- untracked to tracked file
+   git add .      ---- Move all files from working area to staging area -- untracked to tracked file
    
- > git commit -m "message" -- The files which are ready for commit should be in stage area, 
+ > git commit -m "message" ---- The files which are ready for commit should be in stage area, 
                                to perform commit operation we use the this command 
+ > git log ---- The number of commits
+ > git log --oneline (Number of commits in one line)
+ 
+ 
+git diff(working directory to staging area), git diff --staged (staging area to local repository),
+git diff HEAD (working area to Local repository)
+--------------------------------------------------------------------------------------------------
+ > diff command is used in git the difference b/w the changes made on a file.
+ > diff command takes two inputs and reflects the difference between them.
+ 
+ > git diff           (check changes in the working area and the staged area)
+ > git diff --staged  (check chanes in the staging area and local repository)
+ > git diff HEAD      (check changes in the working area and local repository)
+ 
+ 
+ 
+ =====================
+ 8th Completed
+ by Mobin Arshad Khan
