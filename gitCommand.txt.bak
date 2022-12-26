@@ -45,8 +45,8 @@ Distributed Version Control System
 		  
 There are two types of Git Software
 -----------------------------------
-           1. Git Server
-		   2. Git Client
+        1. Git Server
+		2. Git Client
 		   
 Git Server
 ----------
@@ -78,9 +78,6 @@ Architecture of Git (Three stages in Git)
 	  Once the code in staging area, we commit it to the local repository with some standard message,
 	  from local repository we push it to remote repository by providing url, username and password
 	  
-	  
-	  
-	  
 Workign Directory (Working Area)
 --------------------------------
  > The working area is a single checkout of one version of the project.
@@ -99,4 +96,30 @@ Local Repository (Repository Area)(.git)
    This is the most important part of Git, and it is what  is copied when you clone a repository
    from another computer.
    
+Installing GIT
+--------------
+ > Install latest version of git from its official sites
+ > git --version (TO check Git is installed or not)
  
+There are a lot of different ways to use git
+-------------------------------------------
+ > Using Command Line Tools (Recommended)
+ > Using Graphical User Interfaces 
+ 
+ Git Configuration
+ ------------------
+ > After installing Git in our system.
+ > The first thing we need to do is set our username and the email address.
+ > This is because when we use git to change the files in the project.
+   Git uses the information to identify who has made the changes to the file. 
+ > The command to add username and password is:
+        git config
+        git config --list (to see list for configuration)
+		git config --global user.email "myemail@gmail.com"
+		git config --global user.name "Mobin Arshad"
+		
+ > There are three levels of configuration in Git: 
+   System Level
+   Global Level
+   Local level   
+        		
