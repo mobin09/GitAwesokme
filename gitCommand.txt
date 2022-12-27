@@ -176,7 +176,50 @@ git diff HEAD (working area to Local repository)
  > git diff HEAD      (check changes in the working area and local repository)
  
  
+How Git stores the data
+----------------------- 
+ > Git stores the data in the form of keys and values
+ > Value is nothing but the contents of the file.
+ > You give the value and it will calculated a key for it,
+   that is nothing but hash.
+ > git calculated the hashes with SHA1 algorithm.   
+ > SHA1 is a 20 bytes in hexadecimal format.
+ > Not only the content of the files, the directories and so on commits has their own SHA-1
+ > Every object in GIT has its own SHA1.
+ > we can get the hashing of every commit using git log
+ >e.g   git log
+        commit bfe53ea7d2ce2725d206f81c4a76fc78a9706e07 (hash)
+        Author: Mobin Arshad <mobink09@gmail.com>
+        Date:   Thu Dec 22 16:17:20 2022 +0530
+ > TO decode it what is wriiten inside we used: git cat-file <hash> -p
+       git cat-file bfe53ea7d2ce2725d206f81c4a76fc78a9706e07 -p
+	   
+	   
+       mobin@DESKTOP-K1MQ1QS MINGW64 /e/gitSession/workSpace (main)
+       $  git cat-file bfe53ea7d2ce2725d206f81c4a76fc78a9706e07 -p
+       tree e8ce5ba3d59c6e91ad69d9eca39b4d31d066fa6e   (above has is linked to this hash)
+       parent 099177a501ca1d35375e21ac20df4a8be39d99d3
+       author Mobin Arshad <mobink09@gmail.com> 1671706040 +0530
+       committer Mobin Arshad <mobink09@gmail.com> 1671706040 +0530
+
+       How git works
+
+ > So again,
+      git cat-file e8ce5ba3d59c6e91ad69d9eca39b4d31d066fa6e -p
+	   
+	  100644 blob a80115122d91b8cc2d259590ed8aa4478753814a    gitCommand.txt
+      100644 blob 118faf58d02d635d20ab698899b2f9ab45fe6913    gitCommand.txt.bak 
+	   
+ > So again now	   
+	 git cat-file e8ce5ba3d59c6e91ad69d9eca39b4d31d066fa6e -p 
+     
+	 this time we will get actual content in terminal
+	
+Rename(moving) and Restore files in GIT Repository using the mv and the restore command:
+--------------------------------------------------------------------------------
+	Renaming: 
+	    mv abc.txt Abc.html  (Moving/Renaming from abc.txt to Abc.html)
  
  =====================
  8th Completed
- by Mobin Arshad Khan
+ by Mobin Arshad Pathan
