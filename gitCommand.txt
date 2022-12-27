@@ -218,8 +218,12 @@ How Git stores the data
 Rename(moving) and Restore files in GIT Repository using the mv and the restore command:
 --------------------------------------------------------------------------------
 	Renaming: 
-	    mv abc.txt Abc.html  (Moving/Renaming from abc.txt to Abc.html)
- 
+	    mv abc.txt Abc.html  (Moving/Renaming from abc.txt to Abc.html) --{Linux based}
+        git mv  abc.txt Test.txt (Git based renaming)
+		
+	Restore:
+       git restore --staged <file>... from stage to unstage	
+	   git restore Abc.html
  =====================
- 8th Completed
+ 10th Completed
  by Mobin Arshad Pathan
