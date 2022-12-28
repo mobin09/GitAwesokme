@@ -224,6 +224,53 @@ Rename(moving) and Restore files in GIT Repository using the mv and the restore 
 	Restore:
        git restore --staged <file>... from stage to unstage	
 	   git restore Abc.html
+	   
+Git Branching. Understand the concept of creating branches in the GIT project:
+------------------------------------------------------------------------------
+   https://git-school.github.io/visualizing-git/   (Visualizing the git----> important)
+   Have fun!
+   git commit
+   git commit
+   git checkout -b loginFeatures
+   git commit
+   git commit
+   git checkout master
+   git commit
+   git commit
+   git commit
+   git checkout -b signupFeatures
+   git commit
+   git commit
+   git checkout master
+   git commit
+   git commit
+	   
+ > A branch is a version of the repository that diverges from the main working project.	 
+ > It is a feature available in most modern version control systems.
+ > A Git project can have more than one branch.
+ > These branches are a pointer to a snapshot of your changes. 
+ > When you want to add a new feature or fix a bug, you spawn a new branch to summarize your changes.
+ > So, it is complex to merge the unstable code with the main code base and also facilitates 
+   you to clean up your future history before merging with the main branch.
+   
+ > The master branch is a default branch in Git. It is instantiated when first commit made on the project.
+   When you make the first commit, you're given a master branch to the starting commit point. 
+   When you start making a commit, then master branch pointer automatically moves forward. 
+   A repository can have only one master branch.
+   Master branch is the branch in which all the changes eventually get merged back.
+   It can be called as an official working version of your project.	   
+   
+Practical Implementation of the git branching:
+---------------------------------------------
+ > As soon as we initializing the project (git init) master branch created   
+    git checkout -b login_features (created and switched to this branch)
+    Switched to a new branch 'login_features'
+	
+	git branch  <branch name> (Only created the branch not switched) 
+	
+	git branch (git branch --list) -- TO see the total branches
+
+   
  =====================
- 8th Completed
+ 10th Completed
  by Mobin Arshad Pathan
