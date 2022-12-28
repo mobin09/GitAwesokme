@@ -274,7 +274,7 @@ Practical Implementation of the git branching:
    * login_features
      main
 
-  
+ > What ever commit are done to required branch that commit is available only to that branch. 
    
  =====================
  10th Completed

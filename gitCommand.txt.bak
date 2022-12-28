@@ -269,7 +269,12 @@ Practical Implementation of the git branching:
 	git branch  <branch name> (Only created the branch not switched) 
 	
 	git branch (git branch --list) -- TO see the total branches
+	 git branch --list
+     Test
+   * login_features
+     main
 
+  
    
  =====================
  10th Completed
