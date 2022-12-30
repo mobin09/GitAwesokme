@@ -323,6 +323,66 @@ git Merge:
   
   git merge <branch name>
    
+   
+Merge Branches:
+-------------- 
+ > We have the emergency fix ready, and so let's merge the master and emergency-fix branches.
+   First, we need to change to the master branch:
+   
+   git checkout master
+   Switched to branch 'master'
+   
+ > Now we merge the current branch (master) with emergency-fix:
+   
+   git merge emergency-fix
+   Updating 09f4acd..dfa79db
+   Fast-forward
+   index.html | 2 +-
+   1 file changed, 1 insertion(+), 1 deletion(-)
+   
+ > Since the emergency-fix branch came directly from master, 
+   and no other changes had been made to master while we were working, 
+   Git sees this as a continuation of master. 
+   So it can "Fast-forward", just pointing both master and emergency-fix to the same commit.   
+
+ > As master and emergency-fix are essentially the same now, we can delete emergency-fix, as it is no longer needed:
+ 
+   git branch -d emergency-fix
+   Deleted branch emergency-fix (was dfa79db).  
+
+Merge Conflict (how to resolve the merging conflict):
+--------------
+ > Now we can move over to hello-world-images branch and keep working. 
+   Add another image file (img_hello_git.jpg) and change index.html, so it shows it:
+     git checkout hello-world-images
+     Switched to branch 'hello-world-images'
+
+    <!DOCTYPE html>
+
+  		<html>
+		<head>
+		<title>Hello World!</title>
+		<link rel="stylesheet" href="bluestyle.css">
+		</head>
+		<body>
+
+		<h1>Hello world!</h1>
+		<div><img src="img_hello_world.jpg" alt="Hello World from Space" style="width:100%;max-width:960px"></div>
+		<p>This is the first file in my new Git Repo.</p>
+		<p>A new line in our file!</p>
+		<div><img src="img_hello_git.jpg" alt="Hello Git" style="width:100%;max-width:640px"></div>
+
+		</body>
+		</html>
+		
+  Now, we are done with our work here and can stage and commit for this branch:
+  git add --all
+  git commit -m "added new image"
+  [hello-world-images 1f1584e] added new image
+  2 files changed, 1 insertion(+)
+  create mode 100644 img_hello_git.jpg
+	
+
  =====================
  
  
