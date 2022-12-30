@@ -296,7 +296,7 @@ About branch:
 Rename Branch:
 -------------- 
  We can rename the branch with the help of the git branch command. To rename a branch, use the below command:
- $ git branch -m <old branch name><new branch name>  	   
+ $ git branch -m <old branch name> <new branch name>  	   
  git branch -m Test Dummy_branch 
  
 Delete Branch:
@@ -307,13 +307,23 @@ Delete Branch:
      git branch -d<branch name>
 	 $ git branch -d Dummy_branch
        Deleted branch Dummy_branch (was 36aba0c).
+	   
   The git branch d command can be used in two formats.
   Another format of this command is git branch D. 
   The 'git branch D' command is used to delete the specified branch.	 
+   
+git Merge:
+----------
+  1. Fast Forward Merge
+  2. Recursive Merge
+  
+  Git allows you to merge the other branch with the currently active branch.
+  You can merge two branches with the help of git merge command.
+  Below command is used to merge the branches:
    
  =====================
  
  
  
- 12th Completed
+ 14th Completed
  by Mobin Arshad Pathan
