@@ -274,8 +274,46 @@ Practical Implementation of the git branching:
    * login_features
      main
 
+ > What ever commit are done to required branch that commit is available only to that branch. 
+
+Operations on Branches:
+----------------------
+ We can perform various operations on Git branches. The git branch command allows you to create,
+ list, rename and delete branches. Many operations on branches are applied by git checkout and git merge command. 
+ So, the git branch is tightly integrated with the git checkout and git merge commands.
   
+About branch:
+-------------------------
+ > Branches are stored in the .git -> refs -> heads 
+ > check what is present inside the branches file e.g checking for the main branch
+       cat .git/refs/heads/main
+       9ff3b6e64ac60888a26ebb67c612046967a285e7 (referencing to some commit)
+	   
+ > To see which branch head is pointing (current branch)
+     $ CAT .git/HEAD
+     ref: refs/heads/main  (pointing to the main branch)
+
+Rename Branch:
+-------------- 
+ We can rename the branch with the help of the git branch command. To rename a branch, use the below command:
+ $ git branch -m <old branch name><new branch name>  	   
+ git branch -m Test Dummy_branch 
+ 
+Delete Branch:
+-------------
+  You can delete the specified branch. It is a safe operation.
+  In this command, Git prevents you from deleting the branch if it has unmerged changes.
+  Below is the command to do this.
+     git branch -d<branch name>
+	 $ git branch -d Dummy_branch
+       Deleted branch Dummy_branch (was 36aba0c).
+  The git branch d command can be used in two formats.
+  Another format of this command is git branch D. 
+  The 'git branch D' command is used to delete the specified branch.	 
    
  =====================
- 10th Completed
+ 
+ 
+ 
+ 12th Completed
  by Mobin Arshad Pathan
